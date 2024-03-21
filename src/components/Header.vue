@@ -2,7 +2,8 @@
   export default {
     data(){
       return{
-        arrayNav: ['Donna', 'Uomo', 'Bambino',]
+        arrayNav: ['Donna', 'Uomo', 'Bambino',],
+        arrayIcone: ['fa-regular fa-user', 'fa-regular fa-heart', 'fa-solid fa-bag-shopping']
       }
     }
     
@@ -33,10 +34,11 @@
         </div>
 
         <div class="icone">
+          <!-- ciclo for e :class="nome" -->
           <div>
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i v-for="icona in arrayIcone" :class="icona"></i>
+            <!-- <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i> -->
           </div>
         </div>
 
@@ -104,13 +106,10 @@
   }
 }
 
-.icone{
-  i{
-  cursor: pointer;
-  &:hover{
-    text-decoration: underline;
+.icone {
+  i {
+    cursor: pointer;
   }
-}
 }
 
 .icone{

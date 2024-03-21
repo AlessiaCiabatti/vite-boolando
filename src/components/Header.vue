@@ -1,5 +1,10 @@
 <script>
   export default {
+    data(){
+      return{
+        arrayNav: ['Donna', 'Uomo', 'Bambino',]
+      }
+    }
     
   }
 </script>
@@ -11,15 +16,15 @@
 
         <div class="menu">
           <ul>
-            <li>
-              <a href="#">Donna</a>
+            <li v-for="scelta in arrayNav">
+              <a href="#">{{scelta}}</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#">Uomo</a>
             </li>
             <li>
               <a href="#">Bambini</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
@@ -100,8 +105,18 @@
 }
 
 .icone{
+  i{
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+}
+
+.icone{
   .fa-regular{
     padding-right: 8px;
   }
-} 
+}
+
 </style>

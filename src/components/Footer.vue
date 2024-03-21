@@ -1,6 +1,10 @@
 <script>
   export default {
-    
+    data(){
+      return{
+        arraySocial: ['fa-brands fa-square-twitter', 'fa-brands fa-square-facebook', 'fa-brands fa-square-instagram', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-youtube']
+      }
+    } 
   }
 </script>
 
@@ -28,11 +32,11 @@
         <div class="trovaci">
           <h4>Trovaci anche su</h4>
           <div class="icone-footer">
-            <i class="fa-brands fa-square-twitter"></i>
-            <i class="fa-brands fa-square-facebook"></i>
+            <i v-for="social in arraySocial" :class="social"></i>
+            <!-- <i class="fa-brands fa-square-facebook"></i>
             <i class="fa-brands fa-square-instagram"></i>
             <i class="fa-brands fa-square-pinterest"></i>
-            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-youtube"></i> -->
           </div>
         </div>
       </div>

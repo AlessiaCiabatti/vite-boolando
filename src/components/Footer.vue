@@ -2,7 +2,8 @@
   export default {
     data(){
       return{
-        arraySocial: ['fa-brands fa-square-twitter', 'fa-brands fa-square-facebook', 'fa-brands fa-square-instagram', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-youtube']
+        arraySocial: ['fa-brands fa-square-twitter', 'fa-brands fa-square-facebook', 'fa-brands fa-square-instagram', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-youtube'],
+        arrayInfo: ['Informazioni legali', 'Informativa sulla privacy', 'Diritto di recesso']
       }
     } 
   }
@@ -15,15 +16,15 @@
         <h4>Boolando s.r.l.</h4>
         <div class="menu">
           <ul>
-            <li>
-              <a href="#">Informazioni legali</a>
+            <li v-for="info in arrayInfo">
+              <a href="#">{{info}}</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#">Informativa sulla privacy</a>
             </li>
             <li>
               <a href="#">Diritto di recesso</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

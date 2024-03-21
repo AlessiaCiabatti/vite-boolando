@@ -42,47 +42,63 @@
 
 
 <style lang="scss">
+@use '../assets/scss/partials/variables' as *;
+
 .container-footer{
-  background-color: #1a1a1a;
+  background-color: $bg-footer;
   height: 80px;
 }
 
-.container-footer .text-footer{
-  max-width: 1030px;
-  height: 80px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
+.container-footer{
+  .text-footer{
+    max-width: 1030px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.text-footer .boolando{
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.text-footer{
+  .boolando{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.text-footer .menu a{
-  font-size: 11px;
+.text-footer{
+  .menu a{
+    font-size: 11px;
+  }
 }
 
-.text-footer .social{
-  display: flex;
-  align-items: center;
+.text-footer{
+  .social{
+    display: flex;
+    align-items: center;
+  }
 }
 
-.text-footer .trovaci{
-  color: white;
-  display: flex;
-  flex-direction: column;
+.text-footer{
+  .trovaci{
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.social h4{
-  font-size: 11px;
-  padding-bottom: 6px;
+.social{
+  h4{
+    font-size: 11px;
+    padding-bottom: 6px;
+  }
 }
 
-.social .fa-brands{
-  padding-right: 5px;
+.social {
+  .fa-brands{
+    padding-right: 5px;
+  }
 }
 </style>

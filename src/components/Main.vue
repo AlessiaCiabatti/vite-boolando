@@ -1,20 +1,27 @@
 <script>
 import ProductCard from './partials/ProductCard.vue';
+import products from '../assets/data/products';
   export default {
     components:{
       ProductCard
+    },
+    mounted(){
+      console.log(products)
     }
   }
 </script>
 
 <template>
   <div class="container">
+    <ProductCard 
+    v-for="product in products"
+    :key="product.id"
+    :frontImage="product.frontImage"/>
+    <!-- <ProductCard />
     <ProductCard />
     <ProductCard />
     <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
+    <ProductCard /> -->
   </div>
 
 </template>

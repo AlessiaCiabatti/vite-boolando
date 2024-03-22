@@ -1,6 +1,8 @@
 <script>
   export default {
-    
+    props:{
+      frontImage: String
+    }
   }
 </script>
 
@@ -15,7 +17,7 @@
     <p class="sconto">50%</p>
     <p class="sostenibilità">Sostenibilità</p>
 
-    <img src="../../../public/img/1.webp" alt="">
+    <img :src="frontImage">
     <!-- <img class="img-none" src="img/1b.webp" alt=""> -->
     <p class="marca-prodotto">Levi's</p>
     <!-- anche questi sono span non p e la scritta principale è strong-->

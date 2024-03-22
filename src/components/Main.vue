@@ -26,7 +26,8 @@ import products from '../assets/data/products';
     :frontImage="`/src/assets/img/${product.frontImage}`"
     :brand="product.brand"
     :name="product.name"
-    :price="product.price"/>
+    :price="product.price"
+    :badges="product.badges"/>
     <!-- <ProductCard />
     <ProductCard />
     <ProductCard />

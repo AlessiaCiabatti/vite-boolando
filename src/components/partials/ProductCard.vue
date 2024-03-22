@@ -5,6 +5,7 @@
       brand: String,
       name: String,
       price: String,
+      badges: Array,
     }
   }
 </script>
@@ -17,8 +18,12 @@
   <!-- prima immagine -->
   <div class="prodotto-uno">
     <!-- non sono p ma span -->
-    <p class="sconto">50%</p>
-    <p class="sostenibilità">Sostenibilità</p>
+    <!-- <p class="sconto">50%</p> -->
+    <span class="sostenibilità" 
+    v-for="(badge, index) in badges" 
+    :key="index" 
+    :class="badge.type">{{ badge.value }}</span>
+    
 
     <img :src="frontImage">
     <!-- <img class="img-none" src="img/1b.webp" alt=""> -->
@@ -50,23 +55,23 @@
   width: 335px;
 }
 
-.prodotto-uno .sconto{
-  position: absolute;
-  bottom: 60px;
-  background-color: #ff0000;
-  padding: 3px 8px;
-  color: white;
-  z-index: 1
-}
+// .prodotto-uno .sconto{
+//   position: absolute;
+//   bottom: 60px;
+//   background-color: #ff0000;
+//   padding: 3px 8px;
+//   color: white;
+//   z-index: 1
+// }
 
 .prodotto-uno .sostenibilità{
   position: absolute;
   bottom: 60px;
-  left: 45px;
+  // left: 45px;
   background-color: #008000;
   padding: 3px 8px;
   color: white;
-  z-index: 1
+  z-index: 1;
 }
 
 .prodotto-uno .heart:hover{

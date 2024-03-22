@@ -3,7 +3,21 @@
     data(){
       return{
         arraySocial: ['fa-brands fa-square-twitter', 'fa-brands fa-square-facebook', 'fa-brands fa-square-instagram', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-pinterest', 'fa-brands fa-square-youtube'],
-        arrayInfo: ['Informazioni legali', 'Informativa sulla privacy', 'Diritto di recesso']
+
+        arrayInfo: [
+          {
+            text: 'Informazioni legali',
+            href: '#'
+          },
+          {
+            text: 'Informativa sulla privacy',
+            href: '#'
+          },
+          {
+            text: 'Diritto di recesso',
+            href: '#'
+          },
+        ],
       }
     } 
   }
@@ -16,8 +30,9 @@
         <h4>Boolando s.r.l.</h4>
         <div class="menu">
           <ul>
-            <li v-for="info in arrayInfo">
-              <a href="#">{{info}}</a>
+            <li v-for="(info, index) in arrayInfo"
+            :key="`info-${index}`">
+              <a :href="info.href">{{info.text}}</a>
             </li>
             <!-- <li>
               <a href="#">Informativa sulla privacy</a>
@@ -52,45 +67,33 @@
 .container-footer{
   background-color: $bg-footer;
   height: 80px;
-}
 
-.container-footer{
   .text-footer{
     max-width: 1030px;
     height: 80px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-  }
-}
 
-.text-footer{
-  .boolando{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+    .boolando{
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .menu a{
+      font-size: 11px;
+    }
+    .social{
+      display: flex;
+      align-items: center;
+    }
+    .trovaci{
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
 
-.text-footer{
-  .menu a{
-    font-size: 11px;
-  }
-}
-
-.text-footer{
-  .social{
-    display: flex;
-    align-items: center;
-  }
-}
-
-.text-footer{
-  .trovaci{
-    color: white;
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -99,11 +102,10 @@
     font-size: 11px;
     padding-bottom: 6px;
   }
-}
-
-.social {
   .fa-brands{
     padding-right: 5px;
   }
 }
+
+
 </style>

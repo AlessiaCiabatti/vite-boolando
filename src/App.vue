@@ -25,5 +25,5 @@ import Footer from './components/Footer.vue';
 <style lang="scss">
 // importo mian.scss
 
-@use './assets/scss/main.scss'
+@use './assets/scss/main.scss';
 </style>

@@ -2,7 +2,20 @@
   export default {
     data(){
       return{
-        arrayNav: ['Donna', 'Uomo', 'Bambino',],
+        arrayNav: [
+          {
+            text: 'Uomo',
+            href: '#'
+          },
+          {
+            text: 'Donna',
+            href: '#'
+          },
+          {
+            text: 'Bambino',
+            href: '#'
+          },
+        ],
         arrayIcone: ['fa-regular fa-user', 'fa-regular fa-heart', 'fa-solid fa-bag-shopping']
       }
     }
@@ -17,8 +30,9 @@
 
         <div class="menu">
           <ul>
-            <li v-for="scelta in arrayNav">
-              <a href="#">{{scelta}}</a>
+            <li v-for="(scelta, index) in arrayNav"
+            :key="`nav-${index}`">
+              <a :href="scelta.href">{{scelta.text}}</a>
             </li>
             <!-- <li>
               <a href="#">Uomo</a>
@@ -55,9 +69,6 @@
 .container-header{
   background-color: $bg-header;
   height: 55px;
-}
-
-.container-header{
   .nav{
     display: flex;
     align-items: center;
@@ -73,16 +84,14 @@
   ul{
     list-style: none;
     display: flex;
-  }
-}
-
-.menu{
-  ul{
     li{
       a{
         text-decoration: none;
         padding-right: 7px;
         color: $icon-color;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -91,18 +100,10 @@
 .container-header{
   .logo{
     text-align: center;
-  }
-}
-
-.container-header {
-  .logo{
     flex-grow: 1;
-  }
-}
-
-.logo{
-  img{
-    height: 20px;
+    img{
+      height: 20px;
+    }
   }
 }
 
@@ -110,12 +111,11 @@
   i {
     cursor: pointer;
   }
-}
-
-.icone{
   .fa-regular{
     padding-right: 8px;
   }
 }
+
+
 
 </style>

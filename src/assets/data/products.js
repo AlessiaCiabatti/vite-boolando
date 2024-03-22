@@ -1,5 +1,4 @@
-{
-  "products" [
+export default [
     {
       "id": 1,
       "frontImage": "1.webp",
@@ -102,5 +101,4 @@
         }
       ]
     }
-  ]
-}
+  ];

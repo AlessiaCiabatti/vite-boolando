@@ -1,7 +1,14 @@
 <script>
 import ProductCard from './partials/ProductCard.vue';
 import products from '../assets/data/products';
+
+
   export default {
+    data(){
+      return {
+        products
+      }
+    },
     components:{
       ProductCard
     },
@@ -16,7 +23,10 @@ import products from '../assets/data/products';
     <ProductCard 
     v-for="product in products"
     :key="product.id"
-    :frontImage="product.frontImage"/>
+    :frontImage="`/src/assets/img/${product.frontImage}`"
+    :brand="product.brand"
+    :name="product.name"
+    :price="product.price"/>
     <!-- <ProductCard />
     <ProductCard />
     <ProductCard />

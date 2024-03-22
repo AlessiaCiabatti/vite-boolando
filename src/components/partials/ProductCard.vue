@@ -1,7 +1,10 @@
 <script>
   export default {
     props:{
-      frontImage: String
+      frontImage: String,
+      brand: String,
+      name: String,
+      price: String,
     }
   }
 </script>
@@ -19,10 +22,10 @@
 
     <img :src="frontImage">
     <!-- <img class="img-none" src="img/1b.webp" alt=""> -->
-    <p class="marca-prodotto">Levi's</p>
+    <p class="marca-prodotto">{{brand}}</p>
     <!-- anche questi sono span non p e la scritta principale è strong-->
-    <p>RELAXED FIT TEE UNISEX</p>
-    <P class="prezzo-offerta">14,99&#8364;<span class="prezzo-originale"> 29,99&#8364;</span></P>
+    <p>{{name}}</p>
+    <P class="prezzo-offerta">{{price}}&#8364;<span class="prezzo-originale"> 29,99&#8364;</span></P>
     <div class="heart">
     <span>&hearts;</span>
     </div>
@@ -82,5 +85,38 @@
 
 .prodotto-uno img{
   width: 100%;
+}
+
+.prodotto-uno .img-none{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+.prodotto-uno:hover .img-none{
+  display: inline-block;
+}
+
+.prodotto-uno,p{
+  font-size: 12px;
+}
+
+.prodotto-uno .marca-prodotto{
+  color: gray;
+}
+
+.prodotto-uno .prezzo-offerta{
+  color: #ff0000;
+}
+
+.prodotto-uno .prezzo-originale{
+  color: gray;
+  text-decoration: line-through;
+}
+
+.prodotto-uno .six{
+  position: absolute;
+  left: 0px;
 }
 </style>

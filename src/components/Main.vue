@@ -3,6 +3,7 @@ import ProductCard from './partials/ProductCard.vue';
 import products from '../assets/data/products';
 
 
+
   export default {
     data(){
       return {

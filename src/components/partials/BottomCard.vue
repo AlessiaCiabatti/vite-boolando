@@ -19,17 +19,14 @@
 </template>
 
 <style lang="scss">
+@use '../../assets/scss/partials/variables' as *;
 
 .prodotto-uno,p{
   font-size: 12px;
-}
-
-.prodotto-uno .marca-prodotto{
-  color: gray;
-}
-
-p.marca-prodotto{
-  font-size: 15px;
+  .marca-prodotto{
+    color: $marca-color;
+    font-size: 15px;
+  }
 }
 
 </style>

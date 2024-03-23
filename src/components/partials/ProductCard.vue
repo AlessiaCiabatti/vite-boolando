@@ -48,70 +48,57 @@ import BottomCard from '../partials/BottomCard.vue';
 
 
 <style lang="scss">
+@use '../../assets/scss/partials/variables' as *;
 
 .prodotto-uno {
   position: relative;
   height: 530px;
-  width: calc(100vw / 3);
-  margin-bottom: 20px;
-}
-
-.container .prodotto-uno{
-  height: 530px;
   width: 335px;
-}
-
-.prodotto-uno .badges{
-  position: absolute;
-  bottom: 65px;
-  // left: 45px;
-  // background-color: #008000;
-  color: white;
-  z-index: 1;
+  margin-bottom: 20px;
+  .badges{
+    position: absolute;
+    bottom: 65px;
+    color: $writen-color;
+    z-index: 1;
+  }
+  img{
+    width: 100%;
+  }
+  .img-none{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+  }
+  .heart{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    font-size: 20px;
+    background-color: $writen-color;
+    padding: 5px 10px;
+  }
 }
 
 span.discount{
-  background-color: #ff0000;
+  background-color: $heart-color;
   padding: 3px 8px;
 }
 
 span.tag{
-  background-color: #008000;
+  background-color: $sostenibile-g;
   padding: 3px 8px;
   margin-right: 10px;
 }
 
-.prodotto-uno .heart:hover{
-  color: #ff0000;
-  cursor: pointer;
-}
+// .prodotto-uno .heart:hover{
+//   color: #ff0000;
+//   cursor: pointer;
+// }
 
-.prodotto-uno .heart{
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  font-size: 25px;
-  background-color: white;
-  padding: 5px 10px;
-}
-
-.prodotto-uno img{
-  width: 100%;
-}
-
-.prodotto-uno .img-none{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: none;
-}
 
 .prodotto-uno:hover .img-none{
   display: inline-block;
 }
 
-.prodotto-uno .six{
-  position: absolute;
-  left: 0px;
-}
 </style>
